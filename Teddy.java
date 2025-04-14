@@ -3,6 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Teddy extends Actor
 {
     boolean atTop = true;
+    //switches between top and bottom when clicked
     public void act()
     {
         if(Greenfoot.mouseClicked(null)){
