@@ -4,7 +4,7 @@ public class Banana extends Actor{
     //if touching teddy, add skull to show game over
     public void act()
     {
-        move(-20);
+        move(-15);
         if(getX()  <= 0){
             resetBanana();
         }
