@@ -10,7 +10,7 @@ public class Banana extends Actor{
         }
         if(isTouching(Teddy.class)){
             Skull skull = new Skull();
-            getWorld().addObject(skull, 300, 200);
+            getWorld().addObject(skull, 300, 300);
             getWorld().removeObject(this);
         } 
     }
