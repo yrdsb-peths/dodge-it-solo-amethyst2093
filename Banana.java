@@ -4,7 +4,7 @@ public class Banana extends Actor{
     //if touching teddy, add skull to show game over
     public void act()
     {
-        move(-10);
+        move(-20);
         if(getX()  <= 0){
             resetBanana();
         }
@@ -12,15 +12,17 @@ public class Banana extends Actor{
             Skull skull = new Skull();
             getWorld().addObject(skull, 300, 200);
             getWorld().removeObject(this);
-        }
+        } 
     }
-    //reset banana to right of screen, randomize if at bottom or top
+    //reset banana to right of screen, randomize if at bottom, middle, or top
     public void resetBanana(){
-        int num = Greenfoot.getRandomNumber(2);
+        int num = Greenfoot.getRandomNumber(3);
         if(num == 0){
             setLocation(600, 100);
-        } else {
+        } else if(num == 1){
             setLocation(600, 300);
+        } else {
+            setLocation(600, 500);
         }
     }
 }
